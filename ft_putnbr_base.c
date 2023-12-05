@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ft_printf.h"
 
 int	ft_strlen(const char *str)
@@ -22,9 +21,24 @@ int	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
 int	ft_putnbr_base(unsigned long nbr, char *base)
 {
-	
+	int	count;
+	int	bs;
 
-    
+	count = 0;
+	bs = ft_strlen(base);
+	if (nbr < bs)
+		count += ft_putchr(base[nbr]);
+	else
+	{
+		count += ft_putnbr_base(nbr / bs, base);
+		count += ft_putchr(base[nbr % bs]);
+	}
+	return (count);
 }
+// int	main(void)
+// {
+// 	ft_putnbr_base(30,"0123456789abcdef");
+// }
