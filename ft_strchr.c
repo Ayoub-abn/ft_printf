@@ -25,9 +25,3 @@ int	ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     printf("%d",ft_strchr("abn",'l'));
-// }

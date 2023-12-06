@@ -23,7 +23,7 @@ int	ft_putnbr(int n)
 	{
 		count += ft_putchr('-');
 		n = n * -1;
-		ft_putnbr(n);
+		count += ft_putnbr(n);
 	}
 	else if (n >= 0 && n <= 9)
 	{
@@ -36,10 +36,3 @@ int	ft_putnbr(int n)
 	}
 	return (count);
 }
-
-//  int  main()
-// {
-// 	int a = ft_putnbr(-2147483648);
-
-// 	printf("\n%d",a);
-// }
