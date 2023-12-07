@@ -13,9 +13,11 @@ OBJ = $(FILES:.c=.o)
 all : $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rc $(NAME) $(OBJ)
-$(OBJ) : $(FILES)
-	cc $(FILES) -c $(FILES)
+
+%.o: %.c
+	cc $(CFLAGS) -c $<
+	ar rc $(NAME) $@
+
 clean:
 	rm -f $(OBJ)
 fclean: clean

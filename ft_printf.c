@@ -63,18 +63,3 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int a=-1;
-// 	int *p =&a;
-// 	printf("%p",p);
-// 	ft_printf("%p\n",p);
-
-// // 	int	a;
-
-// // 	a = -20;
-// // 	ft_printf("%d",ft_printf("%c", 'c'));
-// }
