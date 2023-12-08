@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
-#include <stdarg.h>
 
-static int	my_printf(char c, va_list ap)
+int	my_printf(char c, va_list ap)
 {
 	int	count;
 
